@@ -8,13 +8,13 @@ from streamlit_gsheets import GSheetsConnection
 import pandas as pd
 import re
 
-st.set_page_config(page_title="Prepared Speech", page_icon="📹")
-st.markdown("# Prepared Speech")
-st.sidebar.header("Prepared Speech")
+st.set_page_config(page_title="Table Topics", page_icon="📹")
+st.markdown("# Table Topics")
+st.sidebar.header("Table Topics")
 
 conn = st.experimental_connection("gsheets", type=GSheetsConnection)
 df = conn.read()
-df = df[df['Speech Type'] == 'Prepared Speech']
+df = df[df['Speech Type'] == 'Table Topics']
 df = df.drop('Speech Type',axis=1)
 # df['View'] 
 # st.write(df)
