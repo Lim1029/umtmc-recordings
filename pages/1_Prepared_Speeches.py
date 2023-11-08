@@ -12,7 +12,7 @@ st.set_page_config(page_title="Prepared Speech", page_icon="📹")
 st.markdown("# Prepared Speech")
 st.sidebar.header("Prepared Speech")
 
-conn = st.connections("gsheets", type=GSheetsConnection)
+conn = st.connection("gsheets", type=GSheetsConnection)
 df = conn.read(ttl=0)
 df = df[df['Speech Type'] == 'Prepared Speech']
 df = df.drop('Speech Type',axis=1)
