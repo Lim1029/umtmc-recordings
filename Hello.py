@@ -24,7 +24,7 @@ def run():
         page_icon="👋",
     )
 
-    st.write("# Welcome to UMTMC Archive! 👋")
+    st.write("# Welcome to UMTMC Recordings! 👋")
 
     st.sidebar.success("Select a speech type to view the recordings.")
 
